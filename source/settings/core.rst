@@ -1626,11 +1626,14 @@ Example Setting:
 
 - Default: <empty>
 
-Specifies the hosts allowed in URLAUTH URLs sent by clients.
+Specifies the host used for URLAUTH URLs. Only this host is accepted in
+the client-provided URLs. Using ``*`` value (not recommended) allows all hosts
+and the generated URLs use :ref:`setting-hostname` as the host.
 
-``*`` allows all. An empty value disables checking.
+An empty value disables the URLAUTH extension entirely.
 
-.. todo:: Indicate imap setting
+.. warning:: Currently the URLAUTH extension has several bugs and it partially
+             violates the standard. It's not recommended to enable it.
 
 
 .. _setting-imap_urlauth_logout_format:
