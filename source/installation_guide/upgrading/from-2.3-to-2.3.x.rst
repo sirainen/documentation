@@ -1,15 +1,22 @@
-Upgrading Dovecot v2.3.x to v2.3.7
+Upgrading Dovecot v2.3.x to v2.3.y
 ==================================
+
+.. contents::
+   :depth: 1
+   :local:
+
+Upgrading Dovecot v2.3.x to v2.3.7
+----------------------------------
 
  * fts-solr: The obsolete break-imap-search parameter is no longer recognized
 
 Upgrading Dovecot v2.3.x to v2.3.12
-===================================
+-----------------------------------
 
  * Event filter syntax has changed, see :ref:`event_filter`.
 
 Upgrading Dovecot v2.3.x to v2.3.14
-===================================
+-----------------------------------
 
  * Removed cydir storage format. It was never intended for production use.
  * Removed snarf plugin. It was for UW-IMAP's mbox compatibility, which is unlikely to be needed anymore.
@@ -23,7 +30,7 @@ Upgrading Dovecot v2.3.x to v2.3.14
 .. _upgrade_2_3_14_max_bucket_id:
 
 Max Bucket ID Safe Shrinking
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -72,7 +79,7 @@ To be informed about shrinking, the
 :ref:`event_fs_dictmap_max_bucket_changed` event can be monitored.
 
 Upgrading Dovecot v2.3.x to v2.3.15
-===================================
+-----------------------------------
 
  * :ref:`setting-ssl_min_protocol` default changed to TLSv1.2. Change it to TLSv1 or TLSv1.1 if you need to support older protocols.
  * The 'SNIPPET' and 'PREVIEW (w/explicit algorithm selection)' IMAP commands have been deprecated. The new RFC 8970 compliant PREVIEW command should be exclusoively used in the future.
@@ -81,5 +88,5 @@ Upgrading Dovecot v2.3.x to v2.3.15
  * :ref:`plugin-imap-compress` now uses per-algorithm compression level settings. The old setting is ignored.
 
 Upgrading Dovecot v2.3.x to v2.3.16
-===================================
+-----------------------------------
  * :ref:`auth-worker service <service_configuration_auth_worker>` service\_count setting has been changed.
